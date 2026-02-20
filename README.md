@@ -1,6 +1,6 @@
 # Habit Quest Terraform Deployment 🏗️☁️
 
-This repository contains the **Terraform configuration** to deploy the **Habit Quest** Flask application on **AWS EC2** using Docker.
+This repository contains the Terraform configuration to deploy the Habit Quest Flask application on AWS EC2 using Docker.
 
 It demonstrates how a modern cloud-deployed application is provisioned, configured, and made publicly accessible, reflecting real-world DevOps practices.
 
@@ -10,10 +10,11 @@ It demonstrates how a modern cloud-deployed application is provisioned, configur
 
 ```mermaid
 flowchart TD
-    Internet -->|HTTP/SSH| EC2[EC2 Instance]
-    EC2 --> Docker[Docker Containers]
-    Docker --> WebApp[Flask Application (Gunicorn)]
-    Docker --> DB[PostgreSQL Database]
+    Internet -->|HTTP/SSH| EC2[EC2_Instance]
+    EC2 --> Docker[Docker_Containers]
+    Docker --> WebApp[Flask_App]
+    Docker --> DB[PostgreSQL_DB]
+    Docker --> Nginx[Nginx_Reverse_Proxy]
 ```
 
 - The EC2 instance serves as the host for Docker containers.
